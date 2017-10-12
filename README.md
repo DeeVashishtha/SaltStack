@@ -9,8 +9,10 @@ In a real time situation, you are expected to build a group of servers segregate
 All pre-requists and detailed information about all the tasks is described in next secion of this document. 
 
 # Pre-requisites 
-
-- Running Linux machines 
+In order to test this automation, you need to have:
+- 2 Running RedHat 7 machines with below mentioned configuration:
+  - 2 disks of 10 GB each attached to the VMs
+  - / partition 4 GB and swap 1 GB created on first disk
 - connectivity between salt-master and Linux machines on port 22 , 4505, 4506
 
 # Build tasks covered by this automation
@@ -25,3 +27,25 @@ All pre-requists and detailed information about all the tasks is described in ne
 - configure snmp/ntp etc. 
 - Perform OS hardening
 - udpate host file 
+
+# Brief desctiption of Salt states
+
+  # pre-minion
+    - This is a small shell script which pushes salt-minon on target machines and configure custom grains
+  # connection 
+    - This state file verifies connectivty of new Linux machines with requried network
+  # XFS
+    - This state file creates required LVM objects and XFS file systems based on pillar data 
+  # users
+    - This state file create standard users, set passwords and add them to sudoers
+  # users-custom
+    - creats users based on pillar data
+  # system
+    - it takes care of package installation, configuartion udpate, OS hardening.
+  # customization
+    - non-standard configuration are taken care by this state
+  
+ Please expect few more edits to to this README document. Feel free to share your thoughts and suggestions around this document.
+  
+  
+   
