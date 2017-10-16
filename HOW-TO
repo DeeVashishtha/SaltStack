@@ -1,0 +1,6 @@
+# Please refer to below steps in order to user this salt stack formula.
+
+First step would to setup our new machines to minon
+ - Setup roster file  
+ - copy ssh keys 
+ 
