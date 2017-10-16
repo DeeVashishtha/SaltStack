@@ -1,6 +1,8 @@
 # Please refer to below steps in order to user this salt stack formula.
 
-First step would to setup our new machines to minon
+First step would to setup our new machines to act as minon
  - Setup roster file  
- - copy ssh keys 
+ - run prep-minion.sh 
+ - run salt-ssh '*' test.ping to verify connectivty between salt master and minions
+ - accept minion's salt keys using salt-key -A 
  
