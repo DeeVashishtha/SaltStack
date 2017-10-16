@@ -1,0 +1,6 @@
+DB-Server:
+  host: x.x.x.x
+  user: root
+App-Server:
+  host: x.x.x.x
+  user: root
