@@ -1,7 +1,7 @@
 ### Update Host file
 hostname_with _domain:
   cmd.run:
-    - name: sed -i "s/navisite.com/test.com/g;s/127.0.1.1/$(hostname -I)/g" /etc/hosts
+    - name: sed -i "s/abc.com/test.com/g;s/127.0.1.1/$(hostname -I)/g" /etc/hosts
 
 ### Prepare NFS client
 install_packages_for_nfs:
