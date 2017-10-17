@@ -1,19 +1,19 @@
 ### create sysadmin user
-sysadmin:
+support:
   user.present:
-    - fullname: Navisite Admin
+    - fullname: Support 
     - shell: /bin/bash
     - createhome: True
-    - password: $1$mrUlsain$Gx5QxMKJP./cuWgsFezsG.
+    - password: "ENCRYPTED PASSWORD"
     - warndays: 7
     - mindays: 0
     - maxdays: 180
-custroot:
+customer:
   user.present:
     - fullname: Cusotmer Account
     - shell: /bin/bash
     - createhome: True
-    - password: $1$j7ZuVnmC$QfQnsmaDvU.8nuIH5JsVh/
+    - password: "ENCRYPTED PASSWORD"
     - warndays: 7
     - mindays: 1
     - maxdays: 180
@@ -28,5 +28,5 @@ root:
 /etc/sudoers:
   file.append:
     - text:
-      - sysadmin ALL=(ALL)       ALL
-      - custroot ALL=(ALL)       ALL
+      - support ALL=(ALL)       ALL
+      - customer ALL=(ALL)       ALL
